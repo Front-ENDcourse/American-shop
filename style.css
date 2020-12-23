@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #cecccc;
+    font-family: 'Roboto','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+h1 {
+
+}
+fieldset {
+    border: none;
+}
+input {
+    display: block;
+}
+
+.wrapper {
+    margin: 30px auto;
+}
