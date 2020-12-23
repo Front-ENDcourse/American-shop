@@ -5,13 +5,16 @@
     padding: 0;
 }
 body {
-    background: #cecccc;
+    background: #f0eeee;
     font-family: 'Roboto','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
+    color: rgb(74, 74, 182);
 }
 
 h1 {
-
+    font-weight: 100;
+}
+img {
+    width: 40px;
 }
 fieldset {
     border: none;
@@ -22,4 +25,7 @@ input {
 
 .wrapper {
     margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    background: #ffff;
 }
