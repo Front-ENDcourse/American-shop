@@ -17,7 +17,9 @@ h1 {
     letter-spacing: -0.07em;
 }
 img {
-    width: 40px;
+    width: 50px;
+    border: 1px solid #adadad;
+    display: inline-block;
 }
 fieldset {
     border: none;
@@ -46,7 +48,7 @@ form label {
     display: block;
     z-index: 1;
 }
-a {
+form a {
     font-size: 12px;
     margin-left: 20px;
 }
@@ -133,11 +135,6 @@ option {
 .lnr-chevron-right {
     font-size: 20px;
 }
-.price-form {
-    background: #f1f3f6;
-    flex: 1 1 0;
-    min-width: 300px;
-}
 .form-tabs {
     position: relative;
     min-height: 500px;
@@ -149,7 +146,105 @@ option {
     width: 30%;
     margin-right: 30px;
 }
+.price-form {
+    background: #f1f3f6;
+    flex: 1 1 0;
+    min-width: 300px;
+    padding: 25px 10px 15px;
+    position: relative;
+}
+.head-summary > h2 {
+    font-size: 16px;
+    font-weight: normal;
+    display: inline-block;
+    flex-grow: 1;
+}
+.head-summary {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+.head-summary > a {
+    color: #adadad;
+    font-size: 12px;
+}
+.product-list {
+    overflow: auto;
+    max-height: 400px;
+    color: black;
+}
+.product {
+    border-bottom: 1px solid #adadad;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
 
+.product-description {
+    display: inline-block;
+}
+.product-description > h3 {
+    font-size: 13px;
+    font-weight: normal;
+    color: #808182;
+}
+.product-description span {
+    font-size: 11px;
+    display: block;
+}
+.quantity > span {
+    display: inline-block;
+}
+.price-info {
+    color: #808182;
+    position: relative;
+    border-bottom: 1px solid #adadad;
+    margin-bottom: 10px;
+}
+.price-text {
+    display: inline-block;
+    font-size: 12px;
+}
+.price-text span {
+    display: block;
+    margin-bottom: 5px;
+}
+.price {
+    display: inline-block;
+    color: #808182;
+    font-size: 12px;
+    vertical-align: top;
+    position: absolute;
+    right: 10px;
+    text-align: end;
+}
+.price span {
+    display: block;
+    margin-bottom: 5px;
+}
+.total-price {
+    position: relative;
+    margin-bottom: 10px;
+}
+.total {
+    font-weight: bold;
+    color: #5a1094;
+    font-size: 14px;
+}
+.agreements {
+    display: inline-block;
+    font-size: 10px;
+    color: #adadad;
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+    left: 0;
+    text-align: center;
+}
+
+.agreements a {
+    color: inherit;
+}
 
 input[type="radio"] {
     opacity: 0;
