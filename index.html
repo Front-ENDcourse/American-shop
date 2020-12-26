@@ -6,54 +6,102 @@
         <title>Cart</title>
         <link rel="stylesheet" href="./style.css">
         <link rel="icon" href="https://media.istockphoto.com/vectors/shopping-cart-icon-vector-id1066398400" type="icon/X"> 
+        <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     </head>
     <body>
         <div class="wrapper">
             <div class="delivery-form">
-                <div class="stages">
-                    <span>Shipping</span>
-                    <span>Billing</span>
-                    <span>Payment</span>
+                <input type="radio" name="tabs" id="shipping-tabs" checked>
+                <label for="shipping-tabs" class="radio-label">Shipping</label>
+                <span class="lnr lnr-chevron-right"></span>
+                <input type="radio" name="tabs" id="billing-tabs">
+                <label for="billing-tabs" class="radio-label">Billing</label>
+                <span class="lnr lnr-chevron-right"></span>
+                <input type="radio" name="tabs" id="payment-tabs">
+                <label for="payment-tabs" class="radio-label">Payment</label>
+                <div class="form-tabs">
+                    <form action="american-shop.com" method="POST" id="form-shipping">
+                        <h1>Shipping Info</h1>
+                        <fieldset>
+                            <legend>Recipient</legend>
+                            <label for="name" class="visually-hidden">Full Name</label>
+                            <input type="text" name="user-name" placeholder="Full Name" id="name" autofocus>
+                            <label for="tel" class="visually-hidden">Daytime Phone</label>
+                            <input type="tel" name="user-tel" placeholder="Daytime Phone" id="tel">
+                            <span>For delivery questions only</span>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Address</legend>
+                            <label for="address" class="visually-hidden">Street Address</label>
+                            <input type="text" name="user-address" placeholder="Street Address" id="address">
+                            <label for="options" class="visually-hidden">Apt, Suite, Bldg, Gate Code. (optional)</label>
+                            <input type="text" name="options" placeholder="Apt, Suite, Bldg, Gate Code. (optional)" id="options">
+                            <label for="city" class="visually-hidden">City</label>
+                            <input type="text" name="user-city" placeholder="City" id="city">
+                            <label for="country" class="visually-hidden">Country</label>
+                            <!-- <input type="text" name="user-country" placeholder="Country" id="country"> -->
+                            <select onchange="this.setAttribute('data-selected', true)">
+                                <option value="" disabled hidden selected class="inactive">Country</option>
+                                <option value="USA">USA</option>
+                                <option value="Germany">Germany</option>
+                                <option value="Russia">Russia</option>
+                            </select>
+                            <label for="zip" class="visually-hidden">Zip</label>
+                            <input type="text" name="user-zip" placeholder="Zip" id="zip">
+                        </fieldset>
+                        <button>Continue</button>
+                    </form>
+                    <form action="american-shop.com" method="POST" id="form-billing">
+                        <h1>Billing Information</h1> 
+                        <a href="#">Same as shipping</a>
+                        <fieldset>
+                            <legend>Billing Contact</legend>
+                            <label for="name" class="visually-hidden">Full Name</label>
+                            <input type="name" name="user-name" placeholder="Full Name" id="name" autofocus>
+                            <label for="email" class="visually-hidden">Email Address</label>
+                            <input type="mail" name="user-tel" placeholder="Email Address" id="email">
+                        </fieldset>
+                        <fieldset>
+                            <legend>Billing Address</legend>
+                            <label for="address" class="visually-hidden">Street Address</label>
+                            <input type="text" name="user-address" placeholder="Street Address" id="address">
+                            <label for="options" class="visually-hidden">Apt, Suite, Bldg, Gate Code. (optional)</label>
+                            <input type="text" name="options" placeholder="Apt, Suite, Bldg, Gate Code. (optional)" id="options">
+                            <label for="city" class="visually-hidden">City</label>
+                            <input type="text" name="user-city" placeholder="City" id="city">
+                            <label for="country" class="visually-hidden">Country</label>
+                            <input type="text" name="user-country" placeholder="Country" id="country">
+                            <label for="zip" class="visually-hidden">Zip</label>
+                            <input type="text" name="user-zip" placeholder="Zip" id="zip">
+                        </fieldset>
+                        <button>Continue</button>
+                    </form>
+                    <form action="american-shop.com" method="POST" id="form-payment">
+                        <h1>Payment</h1>
+                        <span>This is a secure 128-bit SSl encrypted payment</span>
+                        <fieldset>
+                            <legend>Cardholder Name</legend>
+                            <label for="name" class="visually-hidden">Name as it appears on your card</label>
+                            <input type="name" name="user-name" placeholder="Name as it appears on your card" id="name" autofocus>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Card Number</legend>
+                            <label for="address" class="visually-hidden">XXXX XXXX XXXX XXXX XXXX</label>
+                            <input type="text" name="user-address" placeholder="XXXX XXXX XXXX XXXX XXXX" id="address">
+                        </fieldset>
+                        <fieldset class="card-info">
+                            <legend>Expire Date</legend>
+                            <label for="date" class="visually-hidden">MM/YY</label>
+                            <input type="number" name="card-date" placeholder="MM/YY" id="date">
+                        </fieldset>
+                        <fieldset class="card-info">
+                            <legend>Security Code</legend>
+                            <label for="code" class="visually-hidden"></label>
+                            <input type="number" name="card-security-code" placeholder=" " id="code">
+                        </fieldset>
+                        <button>Pay Securely</button>
+                    </form>
                 </div>
-                <h1>Shipping info</h1>
-                <form action="american-shop.com" method="POST">
-                    <fieldset>
-                        <legend>Recipient</legend>
-                        <label>
-                            Full Name
-                            <input type="text">
-                        </label>
-                        <label>
-                            Daytime Phone
-                            <input type="text">
-                        </label>
-                        <span>For delivery questions only</span>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Address</legend>
-                        <label">
-                            Street Address
-                            <input type="text">
-                        </label>
-                        <label>
-                            Apt,Suite,Bldg,Gate Code.(optional)
-                            <input type="text">
-                        </label>
-                        <label>
-                            City
-                            <input type="text">
-                        </label>
-                        <label>
-                            Country
-                            <input type="text">
-                        </label>
-                        <label>
-                            Zip
-                            <input type="text">
-                        </label>
-                    </fieldset>
-                    <button>Continue</button>
-                </form>
             </div>
             <div class="price-form">
                 <h2>Order Summary</h2>
@@ -71,7 +119,7 @@
                     <div>
                         <img src="https://explore.by/files/items/2046/icon.jpg" alt="BackPack">
                         <div>
-                            <h3>The Chelsea boot</h3>
+                            <h3>The Twill Snap Backpack</h3>
                             <span>Pink</span>
                             <span>Quantity:1</span>
                         </div>
@@ -80,7 +128,7 @@
                     <div>
                         <img src="https://sumki-minsk.by/upload/iblock/395/IMG_6174-2.jpg" alt="Tote">
                         <div>
-                            <h3>The Chelsea boot</h3>
+                            <h3>The Twill Zip Tote</h3>
                             <span>Pink</span>
                             <span>Quantity:1</span>
                         </div>
