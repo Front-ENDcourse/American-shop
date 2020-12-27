@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +8,6 @@ body {
     font-family: 'Roboto','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #5a1094;
 }
-
 h1 {
     font-weight: 400;
     font-size: 26px;
@@ -75,9 +73,19 @@ fieldset span {
 }
 form > span {
     margin-bottom: 20px;
+    padding-left: 20px;
     display: block;
     font-size: 15px;
     color: #adadad;
+}
+form > span::before {
+    content: " ";
+    width: 20px;
+    height: 20px;
+    background: url(https://img.icons8.com/cotton/2x/security-shield.png);
+    background-size: 100%;
+    position: absolute;
+    left: 0px;
 }
 select {
     border-radius: 5px;
@@ -95,9 +103,6 @@ select {
 option {
     color: #000;
 }
-
-
-
 .wrapper {
     margin: 30px auto;
     display: flex;
@@ -107,7 +112,6 @@ option {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(97, 96, 96, 0.3);
     overflow: hidden;
-
 }
 .visually-hidden {
     position: absolute;
@@ -129,6 +133,19 @@ option {
     color: #adadad;
     vertical-align: super;
 }
+.icon {
+    position: relative;
+}
+.icon:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background: url(https://s1.iconbird.com/ico/2014/1/633/w512h5121390856930centreofgravity512.png)no-repeat;
+    background-size: 100%;
+}
 .radio-label {
     cursor: pointer;
 }
@@ -144,7 +161,7 @@ option {
 .card-info {
     display: inline-block;
     width: 30%;
-    margin-right: 30px;
+    margin-right: 20px;
 }
 .price-form {
     background: #f1f3f6;
@@ -172,6 +189,7 @@ option {
     overflow: auto;
     max-height: 400px;
     color: black;
+    margin-bottom: 5px;
 }
 .product {
     border-bottom: 1px solid #adadad;
@@ -179,7 +197,6 @@ option {
     padding-bottom: 10px;
     position: relative;
 }
-
 .product-description {
     display: inline-block;
 }
@@ -224,7 +241,7 @@ option {
 }
 .total-price {
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .total {
     font-weight: bold;
@@ -241,11 +258,9 @@ option {
     left: 0;
     text-align: center;
 }
-
 .agreements a {
     color: inherit;
 }
-
 input[type="radio"] {
     opacity: 0;
     width: 1px;
@@ -267,14 +282,22 @@ input[name="user-zip"] {
     display: inline-block;
     margin-left: 10px;
 }
-
+input[name='user-city'] {
+    position: relative;
+}
+input[name='user-city']::before {
+    content: "";
+    background: #000;
+    width: 2000px;
+    height: 200px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    z-index: 1;
+}
 [data-selected] {
     color: #000;
 }
-
-
-
-
 #shipping-tabs:checked ~.form-tabs > #form-shipping, 
 #billing-tabs:checked ~.form-tabs > #form-billing,
 #payment-tabs:checked ~.form-tabs > #form-payment {

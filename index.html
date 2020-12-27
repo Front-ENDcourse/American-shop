@@ -11,20 +11,20 @@
     <body>
         <div class="wrapper">
             <div class="delivery-form">
-                <input type="radio" name="tabs" id="shipping-tabs" checked>
-                <label for="shipping-tabs" class="radio-label">Shipping</label>
+                <input type="radio" name="tabs" id="shipping-tabs" tabindex="-1" checked>
+                <label for="shipping-tabs" class="radio-label" tabindex="0">Shipping</label>
                 <span class="lnr lnr-chevron-right"></span>
-                <input type="radio" name="tabs" id="billing-tabs">
-                <label for="billing-tabs" class="radio-label">Billing</label>
+                <input type="radio" name="tabs" id="billing-tabs" tabindex="-1">
+                <label for="billing-tabs" class="radio-label" tabindex="0">Billing</label>
                 <span class="lnr lnr-chevron-right"></span>
-                <input type="radio" name="tabs" id="payment-tabs">
-                <label for="payment-tabs" class="radio-label">Payment</label>
+                <input type="radio" name="tabs" id="payment-tabs" tabindex="-1">
+                <label for="payment-tabs" class="radio-label" tabindex="0">Payment</label>
                 <div class="form-tabs">
                     <form action="american-shop.com" method="POST" id="form-shipping">
                         <h1>Shipping Info</h1>
                         <fieldset>
                             <legend>Recipient</legend>
-                            <label for="name" class="visually-hidden">Full Name</label>
+                            <label for="text" class="visually-hidden">Full Name</label>
                             <input type="text" name="user-name" placeholder="Full Name" id="name" autofocus required>
                             <label for="tel" class="visually-hidden">Daytime Phone</label>
                             <input type="tel" name="user-tel" placeholder="Daytime Phone" id="tel" required>
@@ -36,8 +36,11 @@
                             <input type="text" name="user-address" placeholder="Street Address" id="address" required>
                             <label for="options" class="visually-hidden">Apt, Suite, Bldg, Gate Code. (optional)</label>
                             <input type="text" name="options" placeholder="Apt, Suite, Bldg, Gate Code. (optional)" id="options">
-                            <label for="city" class="visually-hidden">City</label>
-                            <input type="text" name="user-city" placeholder="City" id="city" required>
+                            <div class="icon">
+                                <label for="city" class="visually-hidden">City</label>
+                                <input type="text" name="user-city" placeholder="City" id="city" required>
+                            </div>
+                            
                             <label for="country" class="visually-hidden">Country</label>
                             <select onchange="this.setAttribute('data-selected', true)" required>
                                 <option value="" disabled hidden selected class="inactive">Country</option>
@@ -85,13 +88,13 @@
                         </fieldset>
                         <fieldset>
                             <legend>Card Number</legend>
-                            <label for="address" class="visually-hidden">XXXX XXXX XXXX XXXX XXXX</label>
+                            <label for="address" class="visually-hidden">Card number</label>
                             <input type="text" name="user-address" placeholder="XXXX XXXX XXXX XXXX XXXX" id="address" required>
                         </fieldset>
                         <fieldset class="card-info">
                             <legend>Expire Date</legend>
                             <label for="date" class="visually-hidden">MM/YY</label>
-                            <input type="number" name="card-date" placeholder="MM/YY" id="date" required>
+                            <input type="month" name="card-date" placeholder="MM/YY" id="date" required>
                         </fieldset>
                         <fieldset class="card-info">
                             <legend>Security Code</legend>
