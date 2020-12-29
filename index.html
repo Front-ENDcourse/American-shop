@@ -40,10 +40,9 @@
                                 <label for="city" class="visually-hidden">City</label>
                                 <input type="text" name="user-city" placeholder="City" id="city" required>
                             </div>
-                            
                             <label for="country" class="visually-hidden">Country</label>
                             <select onchange="this.setAttribute('data-selected', true)" required>
-                                <option value="" disabled hidden selected class="inactive">Country</option>
+                                <option value="" disabled hidden selected   >Country</option>
                                 <option value="USA">USA</option>
                                 <option value="Germany">Germany</option>
                                 <option value="Russia">Russia</option>
@@ -69,10 +68,17 @@
                             <input type="text" name="user-address" placeholder="Street Address" id="address" required>
                             <label for="options" class="visually-hidden">Apt, Suite, Bldg, Gate Code. (optional)</label>
                             <input type="text" name="options" placeholder="Apt, Suite, Bldg, Gate Code. (optional)" id="options">
-                            <label for="city" class="visually-hidden">City</label>
-                            <input type="text" name="user-city" placeholder="City" id="city" required>
+                            <div class="icon">
+                                <label for="city" class="visually-hidden">City</label>
+                                <input type="text" name="user-city" placeholder="City" id="city" required>
+                            </div>
                             <label for="country" class="visually-hidden">Country</label>
-                            <input type="text" name="user-country" placeholder="Country" id="country" required>
+                            <select onchange="this.setAttribute('data-selected', true)" required>
+                                <option value="" disabled hidden selected>Country</option>
+                                <option value="USA">USA</option>
+                                <option value="Germany">Germany</option>
+                                <option value="Russia">Russia</option>
+                            </select>
                             <label for="zip" class="visually-hidden">Zip</label>
                             <input type="text" name="user-zip" placeholder="Zip" id="zip" required>
                         </fieldset>
