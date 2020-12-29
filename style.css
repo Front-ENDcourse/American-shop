@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #e6e9f0;
+    font-family: 'Roboto','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #5a1094;
+}
+h1 {
+    font-weight: 400;
+    font-size: 26px;
+    margin-bottom: 20px;
+    letter-spacing: -0.07em;
+}
+img {
+    width: 50px;
+    border: 1px solid #adadad;
+    display: inline-block;
+}
+fieldset {
+    border: none;
+    margin-bottom: 20px;
+}
+form {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+form input {
+    border-radius: 5px;
+    border: 1px solid #adadad;
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+form label {
+    display: block;
+    z-index: 1;
+}
+form a {
+    font-size: 12px;
+    margin-left: 20px;
+}
+button {
+    background-color: #7a3fa8;
+    width: 60%;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    color: #ffff;
+    font-size: 18px;
+}
+legend {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+fieldset span {
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: middle;
+    width: 100px;
+    margin-left: 10px;
+    color: #adadad;
+}
+form > span {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    display: block;
+    font-size: 15px;
+    color: #adadad;
+}
+form > span::before {
+    content: " ";
+    width: 20px;
+    height: 20px;
+    background: url(https://img.icons8.com/cotton/2x/security-shield.png);
+    background-size: 100%;
+    position: absolute;
+    left: 0px;
+}
+select {
+    border-radius: 5px;
+    border: 1px solid #adadad;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 10px;
+    width: 55%;
+    height: 40px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: #adadad;
+}
+option {
+    color: #000;
+}
+.wrapper {
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    background: #ffff;
+    max-width: 800px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(97, 96, 96, 0.3);
+    overflow: hidden;
+}
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+.delivery-form {
+    padding: 20px 40px 40px 40px;
+    font-size: 14px;
+    margin: 0 auto;
+    min-width: 250px;
+    flex: 1 1 0;
+    max-width: 335px;
+}
+.delivery-form > label {
+    font-size: 12px;
+    color: #adadad;
+    vertical-align: super;
+}
+.icon {
+    position: relative;
+}
+.icon:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background: url(https://s1.iconbird.com/ico/2014/1/633/w512h5121390856930centreofgravity512.png)no-repeat;
+    background-size: 100%;
+}
+.radio-label {
+    cursor: pointer;
+}
+.lnr-chevron-right {
+    font-size: 20px;
+}
+.form-tabs {
+    position: relative;
+    min-height: 500px;
+    min-width: 300px;
+    margin-top: 20px;
+}
+.card-info {
+    display: inline-block;
+    width: 30%;
+    margin-right: 20px;
+}
+.price-form {
+    background: #f1f3f6;
+    flex: 1 1 0;
+    min-width: 300px;
+    padding: 25px 10px 15px;
+    position: relative;
+}
+.head-summary > h2 {
+    font-size: 16px;
+    font-weight: normal;
+    display: inline-block;
+    flex-grow: 1;
+}
+.head-summary {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+.head-summary > a {
+    color: #adadad;
+    font-size: 12px;
+}
+.product-list {
+    overflow: auto;
+    max-height: 400px;
+    color: black;
+    margin-bottom: 5px;
+}
+.product {
+    border-bottom: 1px solid #adadad;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+.product-description {
+    display: inline-block;
+}
+.product-description > h3 {
+    font-size: 13px;
+    font-weight: normal;
+    color: #808182;
+}
+.product-description span {
+    font-size: 11px;
+    display: block;
+}
+.quantity > span {
+    display: inline-block;
+}
+.price-info {
+    color: #808182;
+    position: relative;
+    border-bottom: 1px solid #adadad;
+    margin-bottom: 10px;
+}
+.price-text {
+    display: inline-block;
+    font-size: 12px;
+}
+.price-text span {
+    display: block;
+    margin-bottom: 5px;
+}
+.price {
+    display: inline-block;
+    color: #808182;
+    font-size: 12px;
+    vertical-align: top;
+    position: absolute;
+    right: 10px;
+    text-align: end;
+}
+.price span {
+    display: block;
+    margin-bottom: 5px;
+}
+.total-price {
+    position: relative;
+    margin-bottom: 20px;
+}
+.total {
+    font-weight: bold;
+    color: #5a1094;
+    font-size: 14px;
+}
+.agreements {
+    display: inline-block;
+    font-size: 10px;
+    color: #adadad;
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+    left: 0;
+    text-align: center;
+}
+.agreements a {
+    color: inherit;
+}
+input[type="radio"] {
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+input:checked+.radio-label {
+    color: #5a1094;
+}
+input[type="tel"] {
+    width: 55%;
+    display: inline-block;
+}
+input[name="user-country"] {
+    width: 55%;
+    display: inline-block;
+}
+input[name="user-zip"] {
+    width: 40%;
+    display: inline-block;
+    margin-left: 10px;
+}
+input[name='user-city'] {
+    position: relative;
+}
+input[name='user-city']::before {
+    content: "";
+    background: #000;
+    width: 2000px;
+    height: 200px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    z-index: 1;
+}
+[data-selected] {
+    color: #000;
+}
+#shipping-tabs:checked ~.form-tabs > #form-shipping, 
+#billing-tabs:checked ~.form-tabs > #form-billing,
+#payment-tabs:checked ~.form-tabs > #form-payment {
+    opacity: 1;
+    visibility: visible;
+}
+#form-billing h1{
+    display: inline-block;
+}

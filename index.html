@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cart</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="icon" href="https://media.istockphoto.com/vectors/shopping-cart-icon-vector-id1066398400" type="icon/X"> 
+        <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="delivery-form">
+                <input type="radio" name="tabs" id="shipping-tabs" tabindex="-1" checked>
+                <label for="shipping-tabs" class="radio-label" tabindex="0">Shipping</label>
+                <span class="lnr lnr-chevron-right"></span>
+                <input type="radio" name="tabs" id="billing-tabs" tabindex="-1">
+                <label for="billing-tabs" class="radio-label" tabindex="0">Billing</label>
+                <span class="lnr lnr-chevron-right"></span>
+                <input type="radio" name="tabs" id="payment-tabs" tabindex="-1">
+                <label for="payment-tabs" class="radio-label" tabindex="0">Payment</label>
+                <div class="form-tabs">
+                    <form action="american-shop.com" method="POST" id="form-shipping">
+                        <h1>Shipping Info</h1>
+                        <fieldset>
+                            <legend>Recipient</legend>
+                            <label for="text" class="visually-hidden">Full Name</label>
+                            <input type="text" name="user-name" placeholder="Full Name" id="name" autofocus required>
+                            <label for="tel" class="visually-hidden">Daytime Phone</label>
+                            <input type="tel" name="user-tel" placeholder="Daytime Phone" id="tel" required>
+                            <span>For delivery questions only</span>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Address</legend>
+                            <label for="address" class="visually-hidden">Street Address</label>
+                            <input type="text" name="user-address" placeholder="Street Address" id="address" required>
+                            <label for="options" class="visually-hidden">Apt, Suite, Bldg, Gate Code. (optional)</label>
+                            <input type="text" name="options" placeholder="Apt, Suite, Bldg, Gate Code. (optional)" id="options">
+                            <div class="icon">
+                                <label for="city" class="visually-hidden">City</label>
+                                <input type="text" name="user-city" placeholder="City" id="city" required>
+                            </div>
+                            <label for="country" class="visually-hidden">Country</label>
+                            <select onchange="this.setAttribute('data-selected', true)" required>
+                                <option value="" disabled hidden selected   >Country</option>
+                                <option value="USA">USA</option>
+                                <option value="Germany">Germany</option>
+                                <option value="Russia">Russia</option>
+                            </select>
+                            <label for="zip" class="visually-hidden">Zip</label>
+                            <input type="text" name="user-zip" placeholder="Zip" id="zip" required>
+                        </fieldset>
+                        <button>Continue</button>
+                    </form>
+                    <form action="american-shop.com" method="POST" id="form-billing">
+                        <h1>Billing Information</h1> 
+                        <a href="#">Same as shipping</a>
+                        <fieldset>
+                            <legend>Billing Contact</legend>
+                            <label for="name" class="visually-hidden">Full Name</label>
+                            <input type="name" name="user-name" placeholder="Full Name" id="name" required>
+                            <label for="email" class="visually-hidden">Email Address</label>
+                            <input type="mail" name="user-tel" placeholder="Email Address" id="email" required>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Billing Address</legend>
+                            <label for="address" class="visually-hidden">Street Address</label>
+                            <input type="text" name="user-address" placeholder="Street Address" id="address" required>
+                            <label for="options" class="visually-hidden">Apt, Suite, Bldg, Gate Code. (optional)</label>
+                            <input type="text" name="options" placeholder="Apt, Suite, Bldg, Gate Code. (optional)" id="options">
+                            <div class="icon">
+                                <label for="city" class="visually-hidden">City</label>
+                                <input type="text" name="user-city" placeholder="City" id="city" required>
+                            </div>
+                            <label for="country" class="visually-hidden">Country</label>
+                            <select onchange="this.setAttribute('data-selected', true)" required>
+                                <option value="" disabled hidden selected>Country</option>
+                                <option value="USA">USA</option>
+                                <option value="Germany">Germany</option>
+                                <option value="Russia">Russia</option>
+                            </select>
+                            <label for="zip" class="visually-hidden">Zip</label>
+                            <input type="text" name="user-zip" placeholder="Zip" id="zip" required>
+                        </fieldset>
+                        <button>Continue</button>
+                    </form>
+                    <form action="american-shop.com" method="POST" id="form-payment">
+                        <h1>Payment</h1>
+                        <span>This is a secure 128-bit SSL encrypted payment</span>
+                        <fieldset>
+                            <legend>Cardholder Name</legend>
+                            <label for="name" class="visually-hidden">Name as it appears on your card</label>
+                            <input type="name" name="user-name" placeholder="Name as it appears on your card" id="name" required>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Card Number</legend>
+                            <label for="address" class="visually-hidden">Card number</label>
+                            <input type="text" name="user-address" placeholder="XXXX XXXX XXXX XXXX XXXX" id="address" required>
+                        </fieldset>
+                        <fieldset class="card-info">
+                            <legend>Expire Date</legend>
+                            <label for="date" class="visually-hidden">MM/YY</label>
+                            <input type="month" name="card-date" placeholder="MM/YY" id="date" required>
+                        </fieldset>
+                        <fieldset class="card-info">
+                            <legend>Security Code</legend>
+                            <label for="code" class="visually-hidden"></label>
+                            <input type="number" name="card-security-code" placeholder=" " id="code" required>
+                        </fieldset>
+                        <button>Pay Securely</button>
+                    </form>
+                </div>
+            </div>
+            <div class="price-form">
+                <div class="head-summary">
+                    <h2>Order Summary</h2>
+                    <a href="#">edit order</a>
+                </div>
+                <div class="product-list">
+                    <div class="product">
+                        <img src="https://shopbelaz.by/image/cache/footwear%20mens/brown/2-1200x1200.gif" alt="boots">
+                        <div class="product-description">
+                            <h3>The Chelsea boot</h3>
+                            <span>Yellow</span>
+                            <div class="quantity">
+                                <span>Quantity: </span>
+                                <span>1</span>
+                            </div>
+                        </div>
+                        <span class="price">$235</span>
+                    </div>
+                    <div class="product">
+                        <img src="https://explore.by/files/items/2046/icon.jpg" alt="BackPack">
+                        <div class="product-description">
+                            <h3>The Twill Snap Backpack</h3>
+                            <span>Pink</span>
+                            <div class="quantity">
+                                <span>Quantity: </span>
+                                <span>1</span>
+                            </div>
+                        </div>
+                        <span class="price">$65</span>
+                    </div>
+                    <div class="product">
+                        <img src="https://sumki-minsk.by/upload/iblock/395/IMG_6174-2.jpg" alt="Tote">
+                        <div class="product-description">
+                            <h3>The Twill Zip Tote</h3>
+                            <span>Pink</span>
+                            <div class="quantity">
+                                <span>Quantity: </span>
+                                <span>1</span>
+                            </div>
+                        </div>
+                        <span class="price">$48</span>
+                    </div>
+                </div>
+                <div class="price-info">
+                    <div class="price-text">
+                        <span>Subtotal</span>
+                        <span>Shipping</span>
+                        <span>Taxes</span>
+                    </div>
+                    <div class="price">
+                        <span>$398</span>
+                        <span>Free</span>
+                        <span>$12.12</span>
+                    </div>
+                </div>
+                <div class="total-price">
+                    <span class="total">Total</span>
+                    <span class="price total">$410.12</span>
+                </div>
+                <span class="agreements">All purchases are subject to our <a href="#">Terms and Conditions.</a></span>
+            </div>
+        </div>
+    </body>
+</html>
